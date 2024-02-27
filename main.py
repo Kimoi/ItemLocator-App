@@ -31,7 +31,8 @@ def get_racks_for_current_orders(*order_ids):
                     JOIN Item i ON ico.item_id = i.id
                     JOIN Rack r ON ir.rack_id = r.id
                     WHERE ico.customer_order_id IN %s
-                    GROUP BY r.rack_letter, r.id, ico.item_id, i.item_name, ico.quantity, ico.customer_order_id, ir.is_main
+                    GROUP BY r.rack_letter, r.id, ico.item_id, i.item_name, 
+                        ico.quantity, ico.customer_order_id, ir.is_main
                     ORDER BY r.rack_letter, ico.item_id;
                     ''')
                 # Execute the query with the provided order IDs

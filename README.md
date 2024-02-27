@@ -21,6 +21,7 @@ clone repo >> generate .env >> edit it
 
 ```bash
 git clone https://github.com/Kimoi/ItemLocator-App.git && \
+cd ItemLocator-App && \
 cp env_example .env && \
 nano .env
 ```
@@ -60,4 +61,4 @@ Get
 
 ## ⚠️Erase project
 
-`deactivate && cd .. && rm -fr Django-TreeMenu`
+`deactivate && cd .. && rm -fr ItemLocator-App`
